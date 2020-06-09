@@ -33,7 +33,7 @@ export class RegistroComponent implements OnInit {
       correo,
       password
     );
-    this.router.navigate(['/confirmacion']);
+    this.router.navigate(['/usuario', 'confirmacion']);
   }
 
 }

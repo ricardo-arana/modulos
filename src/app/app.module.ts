@@ -7,10 +7,12 @@ import { PruebaService } from './prueba.service';
 import { SharedModule } from './shared/shared.module';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { DatosPersonalesModule } from './pages/datos-personales/datos-personales.module';
+import { DatosPersonalesComponent } from './pages/datos-personales/datos-personales.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DatosPersonalesComponent
   ],
   imports: [
     BrowserModule,

@@ -7,7 +7,6 @@ import { DatosPersonalesService } from './datos-personales.service';
 import { RouterModule } from '@angular/router';
 
 
-
 @NgModule({
   declarations: [RegistroComponent, ConfirmacionComponent],
   imports: [
