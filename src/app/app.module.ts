@@ -8,11 +8,13 @@ import { SharedModule } from './shared/shared.module';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { DatosPersonalesModule } from './pages/datos-personales/datos-personales.module';
 import { DatosPersonalesComponent } from './pages/datos-personales/datos-personales.component';
+import { ListaComprasComponent } from './pages/lista-compras/lista-compras.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DatosPersonalesComponent
+    DatosPersonalesComponent,
+    ListaComprasComponent
   ],
   imports: [
     BrowserModule,

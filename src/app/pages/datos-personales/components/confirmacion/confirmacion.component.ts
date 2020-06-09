@@ -22,7 +22,7 @@ export class ConfirmacionComponent implements OnInit {
   }
 
   regresar() {
-    this.router.navigate(['/registro']);
+    this.router.navigate(['/usuario', 'registro']); // /usuario/registro
   }
 
 }

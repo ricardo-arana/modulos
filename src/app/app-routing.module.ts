@@ -5,6 +5,7 @@ import { ConfirmacionComponent } from './pages/datos-personales/components/confi
 import { ListaPrincipalComponent } from './pages/lista-compras/components/lista-principal/lista-principal.component';
 import { AppComponent } from './app.component';
 import { DatosPersonalesComponent } from './pages/datos-personales/datos-personales.component';
+import { ListaComprasComponent } from './pages/lista-compras/lista-compras.component';
 
 
 const routes: Routes = [
@@ -13,7 +14,10 @@ const routes: Routes = [
     {path: 'registro', component: RegistroComponent},
     {path: 'confirmacion', component: ConfirmacionComponent},
   ]},
-  {path: 'lista', component: ListaPrincipalComponent},
+  {path: 'compras', component: ListaComprasComponent,
+children: [
+  {path: 'lista', component: ListaPrincipalComponent}
+]},
   {path: '**', pathMatch: 'full', redirectTo: 'usuario/registro'}
 ];
 
