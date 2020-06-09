@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { PruebaService } from './prueba.service';
 import { SharedModule } from './shared/shared.module';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { DatosPersonalesModule } from './pages/datos-personales/datos-personales.module';
 
 @NgModule({
   declarations: [
@@ -15,8 +16,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     SharedModule,
-    ReactiveFormsModule,
-    FormsModule
+    DatosPersonalesModule
   ],
   providers: [
     PruebaService
