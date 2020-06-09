@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { PruebaService } from './prueba.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'modulos';
+  constructor(private pruebaService: PruebaService) {
+    this.pruebaService.imprimirHola();
+  }
 }
