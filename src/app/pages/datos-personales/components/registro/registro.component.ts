@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormGroup, FormControl} from '@angular/forms';
 import { DatosPersonalesService } from '../../datos-personales.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-registro',
@@ -9,7 +10,8 @@ import { DatosPersonalesService } from '../../datos-personales.service';
 })
 export class RegistroComponent implements OnInit {
   forma: FormGroup;
-  constructor(private datos: DatosPersonalesService) {
+  constructor(private datos: DatosPersonalesService,
+              private router: Router) {
     this.forma = new FormGroup({
       nombre: new FormControl(),
       correo: new FormControl(),
@@ -27,9 +29,7 @@ export class RegistroComponent implements OnInit {
       this.forma.value.correo,
       this.forma.value.password
     );
-    setTimeout(()=> {
-      console.log('datos del servicio: ',this.datos.obtenerDatos());
-    },3000)
+    this.router.navigate(['/confirmacion']);
   }
 
 }
