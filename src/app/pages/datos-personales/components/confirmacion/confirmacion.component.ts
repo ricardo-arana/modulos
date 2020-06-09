@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DatosPersonalesService } from '../../datos-personales.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-confirmacion',
@@ -9,7 +10,8 @@ import { DatosPersonalesService } from '../../datos-personales.service';
 export class ConfirmacionComponent implements OnInit {
   nombre: string;
   correo: string;
-  constructor(private datos: DatosPersonalesService) {
+  constructor(private datos: DatosPersonalesService,
+              private router: Router) {
     const datosPersonale = this.datos.obtenerDatos();
     this.nombre = datosPersonale.nombre;
     this.correo = datosPersonale.correo;
@@ -17,6 +19,10 @@ export class ConfirmacionComponent implements OnInit {
    }
 
   ngOnInit(): void {
+  }
+
+  regresar() {
+    this.router.navigate(['/registro']);
   }
 
 }

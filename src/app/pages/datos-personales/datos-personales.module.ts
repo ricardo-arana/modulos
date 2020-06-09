@@ -4,6 +4,7 @@ import { RegistroComponent } from './components/registro/registro.component';
 import { ConfirmacionComponent } from './components/confirmacion/confirmacion.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { DatosPersonalesService } from './datos-personales.service';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -12,7 +13,8 @@ import { DatosPersonalesService } from './datos-personales.service';
   imports: [
     CommonModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    RouterModule
   ],
   exports: [
     RegistroComponent

@@ -12,10 +12,13 @@ export class RegistroComponent implements OnInit {
   forma: FormGroup;
   constructor(private datos: DatosPersonalesService,
               private router: Router) {
+
+    const {nombre, correo, password} = this.datos.obtenerDatos();
+
     this.forma = new FormGroup({
-      nombre: new FormControl(),
-      correo: new FormControl(),
-      password: new FormControl()
+      nombre: new FormControl(nombre),
+      correo: new FormControl(correo),
+      password: new FormControl(password)
     });
    }
 
@@ -23,11 +26,12 @@ export class RegistroComponent implements OnInit {
   }
 
   guardar() {
-    console.log(this.forma.value);
+    //console.log(this.forma.value);
+    const {nombre, correo, password} = this.forma.value;
     this.datos.guardarDatosPersonales(
-      this.forma.value.nombre,
-      this.forma.value.correo,
-      this.forma.value.password
+      nombre,
+      correo,
+      password
     );
     this.router.navigate(['/confirmacion']);
   }
