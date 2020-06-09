@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { ListaPrincipalComponent } from './components/lista-principal/lista-principal.component';
 
 
-
 @NgModule({
   declarations: [ListaPrincipalComponent],
   imports: [

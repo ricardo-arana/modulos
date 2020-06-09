@@ -1,16 +1,19 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-
-import { ListaPrincipalComponent } from './pages/lista-compras/components/lista-principal/lista-principal.component';
-
+import { AppComponent } from './app.component';
+import { dpRoutes } from './pages/datos-personales/datos-personales.routing';
+import { DatosPersonalesComponent } from './pages/datos-personales/datos-personales.component';
 import { ListaComprasComponent } from './pages/lista-compras/lista-compras.component';
+import { lcRoutes } from './pages/lista-compras/lista-compras.routing';
 
 
 const routes: Routes = [
-  {path: 'compras', component: ListaComprasComponent,
-children: [
-  {path: 'lista', component: ListaPrincipalComponent}
-]},
+  {path: 'usuario', component: DatosPersonalesComponent,
+  children: dpRoutes
+},
+{path: 'compras', component: ListaComprasComponent,
+  children: lcRoutes
+},
   {path: '**', pathMatch: 'full', redirectTo: 'usuario/registro'}
 ];
 
