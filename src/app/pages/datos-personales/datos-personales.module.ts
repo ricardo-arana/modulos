@@ -5,6 +5,7 @@ import { ConfirmacionComponent } from './components/confirmacion/confirmacion.co
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { DatosPersonalesService } from './datos-personales.service';
 import { RouterModule } from '@angular/router';
+import { DatosPersonalesRoutingModule } from './datos-personales.routing';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { RouterModule } from '@angular/router';
     CommonModule,
     ReactiveFormsModule,
     FormsModule,
-    RouterModule
+    RouterModule,
+    DatosPersonalesRoutingModule
   ],
   exports: [
     RegistroComponent
