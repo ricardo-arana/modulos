@@ -4,15 +4,12 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PruebaService } from './prueba.service';
-import { SharedModule } from './shared/shared.module';
-import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { SharedModule } from './shared/shared.module';;
 import { DatosPersonalesModule } from './pages/datos-personales/datos-personales.module';
-import { ListaComprasComponent } from './pages/lista-compras/lista-compras.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    ListaComprasComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,

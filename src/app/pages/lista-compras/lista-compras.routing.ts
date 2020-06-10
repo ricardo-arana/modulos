@@ -4,14 +4,16 @@ import { ListaPrincipalComponent } from './components/lista-principal/lista-prin
 import { NgModule } from '@angular/core';
 
 
-export const lcRoutes: Routes = [
-    
-      {path: 'lista', component: ListaPrincipalComponent}
+const lcRoutes: Routes = [
+{path: '', component: ListaComprasComponent,
+      children: [
+       {path: 'lista', component: ListaPrincipalComponent}
+      ]}
    
 ];
 
-// @NgModule({
-//     imports: [ RouterModule.forChild(routes)],
-//     exports: [RouterModule]
-// })
-// export class ListaComprasRouting {}
+@NgModule({
+    imports: [ RouterModule.forChild(lcRoutes)],
+    exports: [RouterModule]
+})
+export class ListaComprasRouting {}
