@@ -9,6 +9,8 @@ const routes: Routes = [
 {path: 'compras',
   loadChildren: () => import('./pages/lista-compras/lista-compras.module').then(m => m.ListaComprasModule)
 },
+{path: 'ventas',
+  loadChildren: () => import('./pages/ventas/ventas.module').then(m => m.VentasModule)},
   {path: '**', pathMatch: 'full', redirectTo: 'usuario/registro'}
 ];
 
