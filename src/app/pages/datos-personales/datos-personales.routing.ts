@@ -5,13 +5,18 @@ import { NgModule } from '@angular/core';
 import { DatosPersonalesComponent } from './datos-personales.component';
 
 
+
 export const dpRoutes: Routes = [
-   {path: 'registro', component: RegistroComponent},
-            {path: 'confirmacion', component: ConfirmacionComponent}
+  {path: '', component: DatosPersonalesComponent,
+  children: [
+    {path: 'registro', component: RegistroComponent},
+    {path: 'confirmacion', component: ConfirmacionComponent}
+  ]
+}
 ];
 
-// @NgModule({
-//     imports: [RouterModule.forRoot(dpRoutes)],
-//     exports: [RouterModule]
-//   })
-//   export class DatosPersonalesRoutingModule { }
+@NgModule({
+    imports: [RouterModule.forChild(dpRoutes)],
+    exports: [RouterModule]
+  })
+  export class DatosPersonalesRoutingModule { }
